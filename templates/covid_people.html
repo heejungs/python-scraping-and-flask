@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>my home</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    </head>
+    <body>
+      <h1>코로나 현황</h1>
+      <a href='/items'>COVID-19 SOUTH KOREA 보러가기</a>
+
+      <div class="box">
+        {% for i in msg %}
+        <div class="datetime"><h3>날짜 : {{ i['datetime'] }} | Total : {{ i['total'] }} | 구 : {{ i['gu'] }} |
+          도시 : {{ i['city'] }} | 케이스 : {{ i['cases'] }} |
+          상황 : {{i['src']}}
+        </h3></div>
+      {% endfor %}
+
+    
+    </body>
+</html>

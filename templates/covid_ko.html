@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset='utf-8'>
+  <title>COVID-19</title>
+ </head>
+ <body>
+  <h1>COVID-19_pandemic_in_South_Korea</h1>
+  <a href='/'>코로나 현황보러가기</a>
+  <div>
+      <h3>= DATE ====== CASE ====== DEATH ==</h3>
+    {% for i in msg %}
+    <div><h3> {{ i['Date']}}  |  {{ i['cases']}}  |  {{ i['death']}}  </h3></div>
+  {% endfor %}
+ </body>
+</html>
